@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>🌴 Jungle 360 Walk</title>
+
+  <!-- Pannellum CSS -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
+
+  <style>
+    body { margin: 0; font-family: Arial; }
+    #panorama {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div id="panorama"></div>
+
+<!-- Pannellum JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+
+<script>
+pannellum.viewer('panorama', {
+    "default": {
+        "firstScene": "scene1",
+        "autoLoad": true,
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+
+        "scene1": {
+            "title": "🌳 Jungle Entrance",
+            "panorama": "BEDROOM.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 320,
+                    "type": "scene",
+                    "text": "Go deeper 🌿",
+                    "sceneId": "scene2"
+                }
+            ]
+        },
+
+        "scene2": {
+            "title": "🌴 Deep Jungle",
+            "panorama": "BEDROOM TWO.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": -90,
+                    "type": "scene",
+                    "text": "Go back",
+                    "sceneId": "scene1"
+                },
+                {
+                    "pitch": 5,
+                    "yaw": -130,
+                    "type": "scene",
+                    "text": "Go to river 🌊",
+                    "sceneId": "scene3"
+                }
+            ]
+        },
+
+        "scene3": {
+            "title": "🏞 Jungle River",
+            "panorama": "https://pannellum.org/images/bma-1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "Return 🌿",
+                    "sceneId": "scene2"
+                }
+            ]
+        }
+
+    }
+});
+</script>
+
+</body>
+</html>
