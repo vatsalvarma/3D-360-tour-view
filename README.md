@@ -1,6 +1,6 @@
 Visit: https://vatsalvarma.github.io/3D-360-tour-view/
 
-project-folder/
+project-folder/ 
 │── index.html
 │── BEDROOM.jpg
 │── BEDROOM TWO.jpg
